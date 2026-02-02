@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Моя страница</title>
+</head>
+<body>
+    <!-- 1. Сами кнопки -->
+    <div id="lang-switches" style="padding: 20px; font-family: sans-serif;">
+        <button onclick="doTranslate('en')">English (US)</button>
+        <button onclick="doTranslate('de')">Deutsch</button>
+        <button onclick="doTranslate('ru')">Русский</button>
+    </div>
+
+    <!-- 2. Скрытый стандартный гугл (он нужен как движок) -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <script type="text/javascript">
+        // Функция, которая делает ХОП
+        function doTranslate(lang) {
+            var select = document.querySelector('select.goog-te-combo');
+            if (select) {
+                select.value = lang;
+                select.dispatchEvent(new Event('change'));
+            }
+        }
+
+        // Инициализация движка
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ru',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <!-- 3. Сам скрипт Гугла -->
+    <script type="text/javascript" src="https://translate.google.com"></script>
+
+    <style>
+        /* Убираем уродливую плашку сверху, которая вылезает после перевода */
+        body { top: 0 !important; }
+        .skiptranslate iframe { display: none !important; }
+        button { cursor: pointer; padding: 5px 10px; margin-right: 5px; }
+    </style>
+
+    <div class = "Header">
+
+        <h1>Привет, это мой сайт!</h1>
+
+        <div id="Text-Sites">
+            <h2>Ссылки:</h2>
+        </div>
+
+    </div>
+
+    <div class = "Buttons">
+
+        <a href="https://youtube.com/channel/UC28FUQgZiIJxZethBxCK8NA?si=r-wmTU1KEBYiMzaz">
+            <button class="youtube">мой ютуб-канал</button>
+        </a>
+
+        <a href="https://t.me/moiknnal" target="_blank">
+            <button class="telegram">мой телеграмм-канал</button>
+        </a>
+
+    </div>
+
+    <div class="My-path">
+        <h3>Путь в программировании который я пройду</h3>
+        <div id="table">
+            <ul>
+                <li>HTML</li>
+                <li>Pascal</li>
+                <li>C</li>
+                <li>Assembly</li>
+                <li>Fortran</li>
+                <li>Prolog</li>
+                <li>Lisp</li>
+            </ul>
+            <table border="1">
+                <thead>
+                <tr>
+                    <th>Язык</th>
+                    <th>Срок (мес)</th>
+                    <th>Сложность</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>HTML</td>
+                    <td>1</td>
+                    <td>1/10</td>
+                </tr>
+                <tr>
+                    <td>Pascal</td>
+                    <td>6</td>
+                    <td>4/10</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>12</td>
+                    <td>8/10</td>
+                </tr>
+                <tr>
+                    <td>Rust</td>
+                    <td>12</td>
+                    <td>7/10</td>
+                </tr>
+                <tr>
+                    <td>Assembly</td>
+                    <td>12</td>
+                    <td>10/10</td>
+                </tr>
+                <tr>
+                    <td>Fortran</td>
+                    <td>6</td>
+                    <td>7/10</td>
+                </tr>
+                <tr>
+                    <td>Prolog</td>
+                    <td>6</td>
+                    <td>7/10</td>
+                </tr>
+                <tr>
+                    <td>Lisp</td>
+                    <td>12</td>
+                    <td>9/10</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="podrobnee-pro-vse">
+        <p>
+            <a href="html-info.html" style="color: lightgreen;">Подробнее про мой первый шаг (HTML)</a>
+        </p>
+    </div>
+    <div class="My-instruments">
+        <h2>Мой инструментарий</h2>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>Инструмент</th>
+                <th>Назначение</th>
+            </tr>
+            <tr>
+                <td>SASM</td>
+                <td>Для windows assembler</td>
+            </tr>
+            <tr>
+                <td>WebStorm</td>
+                <td>Для Web'а (HTML5, CSS3)</td>
+            </tr>
+            <tr>
+                <td>Visual Studio</td>
+                <td>Для разработки на С под Windows</td>
+            </tr>
+            <tr>
+                <td>CLion</td>
+                <td>Для разработки на С</td>
+            </tr>
+            <tr>
+                <td>Code::Blocks</td>
+                <td>Для простых программ на С++</td>
+            </tr>
+            <tr>
+                <td>Microchip studio</td>
+                <td>Для программирования микроконтроллеров на С и Assembler</td>
+            </tr>
+            <tr>
+                <td>RustRover</td>
+                <td>Для программирования на Rust</td>
+            </tr>
+            <tr>
+                <td>Free Pascal IDE</td>
+                <td>Для Pascal</td>
+            </tr>
+            <tr>
+                <td>Vim</td>
+                <td>Использую как простой интсрумент для простых программ на любых языках</td>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="what-do-you-like">
+        <p>Какие языки программирования из моего списка тебе нравятся больше?</p>
+        <div id="labels">
+            <label for="HTML-c-CSS">
+                <input type="checkbox" id="HTML-c-CSS"> HTML c CSS
+            </label>
+            <label for="Pascal">
+                <input type="checkbox" id="Pascal"> Pascal
+            </label>
+            <label for="C">
+                <input type="checkbox" id="C"> C
+            </label>
+            <label for="Rust">
+                <input type="checkbox" id="Rust"> Rust
+            </label>
+            <label for="Assembly">
+                <input type="checkbox" id="Assembly"> Assembly
+            </label>
+            <label for="Fortran">
+                <input type="checkbox" id="Fortran"> Fortran
+            </label>
+            <label for="Prolog">
+                <input type="checkbox" id="Prolog"> Prolog
+            </label>
+            <label for="Lisp">
+                <input type="checkbox" id="Lisp"> Lisp
+            </label>
+        </div>
+    </div>
+</body>
+</html>

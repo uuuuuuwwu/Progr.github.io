@@ -1,0 +1,42 @@
+body {
+    background-color: gray;
+    color: white;
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.5;
+}
+
+button {
+    cursor: pointer;
+    padding: 5px;
+    border: 2px black;
+}
+
+.youtube {
+    background-color: red;
+    color: white;
+}
+
+.telegram {
+    background-color: deepskyblue;
+    color: white;
+}
+
+ul {
+    line-height: 1.6;
+    border-left: 5px solid gold;
+}
+table {
+    border-collapse: separate;
+    margin-top: 20px;
+    background-color: #777777;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 2px solid #444;
+}
+.My-instruments table {
+    border-collapse: separate;
+    margin-top: 20px;
+    background-color: #777777;
+}
