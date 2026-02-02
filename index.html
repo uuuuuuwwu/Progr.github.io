@@ -9,45 +9,6 @@
     <title>Моя страница</title>
 </head>
 <body>
-    <!-- 1. Сами кнопки -->
-    <div id="lang-switches" style="padding: 20px; font-family: sans-serif;">
-        <button onclick="doTranslate('en')">English (US)</button>
-        <button onclick="doTranslate('de')">Deutsch</button>
-        <button onclick="doTranslate('ru')">Русский</button>
-    </div>
-
-    <!-- 2. Скрытый стандартный гугл (он нужен как движок) -->
-    <div id="google_translate_element" style="display:none;"></div>
-
-    <script type="text/javascript">
-        // Функция, которая делает ХОП
-        function doTranslate(lang) {
-            var select = document.querySelector('select.goog-te-combo');
-            if (select) {
-                select.value = lang;
-                select.dispatchEvent(new Event('change'));
-            }
-        }
-
-        // Инициализация движка
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'ru',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-    </script>
-
-    <!-- 3. Сам скрипт Гугла -->
-    <script type="text/javascript" src="https://translate.google.com"></script>
-
-    <style>
-        /* Убираем уродливую плашку сверху, которая вылезает после перевода */
-        body { top: 0 !important; }
-        .skiptranslate iframe { display: none !important; }
-        button { cursor: pointer; padding: 5px 10px; margin-right: 5px; }
-    </style>
-
     <div class = "Header">
 
         <h1>Привет, это мой сайт!</h1>
@@ -217,4 +178,5 @@
         </div>
     </div>
 </body>
+
 </html>
